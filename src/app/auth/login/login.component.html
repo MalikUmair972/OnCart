@@ -1,14 +1,50 @@
-<div class="container flex flex-row justify-between">
+<div class="main flex flex-row justify-between">
+  <!-- Left Image Section -->
   <div class="img">
-    <img
-      src="assets/women.jfif"
-      class="main-img h-screen w-[830px]"
-      alt="women with shopping bags"
+    <img 
+      src="assets/women.jfif" 
+      class="main-img h-screen w-[830px]" 
+      alt="Woman with shopping bags" 
     />
   </div>
-  <div class="login">
-    <div class="logo">
-        <img src="assets/logo.png" class="w-[400px]" alt="logo">
+
+  <!-- Login Section -->
+  <div class="login w-[460px] px-4 bg-white rounded-tl-[45px] rounded-bl-[45px]">
+    <!-- Logo -->
+    <div class="logo flex justify-center items-center">
+      <img src="assets/logo.png" class="h-44" alt="Logo" />
+    </div>
+
+    <!-- Login Form -->
+    <div class="form flex flex-col justify-center p-2">
+      <h1 class="text-2xl pb-2 font-bold pl-2 -mt-2">Sign in to your Account</h1>
+
+      <form class="example-form">
+        <mat-form-field class="example-full-width w-full">
+          <mat-label>Enter Email or Phone Number</mat-label>
+          <input matInput type="email" />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width w-full">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" />
+        </mat-form-field>
+
+        <button class="mt-1 w-full" mat-flat-button type="submit">Login</button>
+      </form>
+
+      <!-- Terms & Links -->
+      <span class="text-xs text-center px-4">
+        By selecting Create personal account, you agree to our 
+        <a href="" class="text-[#338187] font-bold">User Agreement</a> and acknowledge reading our 
+        <a href="" class="text-[#338187] font-bold">User Privacy Notice</a>.
+      </span>
+
+      <a href="#" class="mt-2 text-sm font-bold text-[#338187]">Forgot Password?</a>
+
+      <app-social-login></app-social-login>
+
+      <span class="text-center mt-2">Don’t have an account?<a href="#" class="text-sm font-bold text-[#338187]"> Signup</a></span>
     </div>
   </div>
 </div>
