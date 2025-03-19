@@ -1,0 +1,14 @@
+$primary-color: #338187;
+$font : Inter;
+.main {
+
+    background-color: $primary-color;
+    .main-img {
+        border-top-right-radius: 45px;
+        border-bottom-right-radius: 45px;
+    }
+    h1 {
+     color: $primary-color;
+     font-family: $font;
+    }
+}
