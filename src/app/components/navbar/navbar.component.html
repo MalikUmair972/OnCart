@@ -1,16 +1,18 @@
-<div class="header h-[60px] flex flex-row items-center">
+<div class="header bg-[#338187] h-[60px] flex flex-row items-center">
 
     <a href="">
         <div class="logo">
             <img class="h-24 w-32" src="assets/logo.png" alt="">
         </div>
     </a>
-    <div class="search-bar">
-        <mat-form-field class="w-full">
+    <div class="search-bar flex flex-row max-w-[750px] mt-3">
+        <mat-form-field class="w-[500px]">
             <mat-label>Search For Any Product</mat-label>
-            <mat-icon matPrefix fontSet="material-icons">search</mat-icon>
+            <mat-icon matPrefix>search</mat-icon>
             <input matInput type="text" placeholder="Search..." />
         </mat-form-field>
+
+        <app-select-dropdown class="relative right-[213px]"></app-select-dropdown>
     </div>
     
 </div>
