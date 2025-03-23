@@ -1,3 +1,113 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$oncart-primary: mat.define-palette(mat.$indigo-palette);
+$oncart-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$oncart-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$oncart-theme: mat.define-light-theme((
+  color: (
+    primary: $oncart-primary,
+    accent: $oncart-accent,
+    warn: $oncart-warn,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($oncart-theme);
+
+@import "scss/main";
+@import "scss/theme";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .mat-mdc-text-field-wrapper {
+    background-color: #fff !important;
+    border: 1px solid $primary-color;
+    border-radius: 50px !important;
+    height: 48px !important;
+  
+    .mdc-line-ripple::before  {
+         border-bottom-width: 0px !important;
+         position: static !important;
+    }
+    .mdc-line-ripple--active::after {
+        opacity: 0 !important;
+        border-bottom-color : transparent !important;
+    } 
+  }
+
+  .mat-mdc-form-field .mat-mdc-floating-label.mdc-floating-label {
+    margin-top: -4px !important;
+    font-size: 12px;
+  }
+
+  .mat-mdc-form-field-subscript-wrapper {
+    height: 14px;
+  }
+
+  .mat-mdc-form-field-focus-overlay {
+    bottom: -10px !important;
+  }
+
+  // .mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control {
+  //   height: 0px !important; }
+
+.mat-mdc-unelevated-button {
+  background-color: $primary-color !important;
+  color: #fff !important;
+  height: 50px !important;
+  border-radius: 45px !important;
+  font-size: 18px !important;
+}
+
+.mat-mdc-outlined-button {
+  border-color: $primary-color !important;
+  border-width: 3px !important;
+  border-radius: 50px !important;
+  height: 50px !important;
+  padding: 0 !important;
+}
+
+.mdc-button .mdc-button__label {
+  position: relative;
+  display: flex;
+  gap: 5px;
+}
+  
