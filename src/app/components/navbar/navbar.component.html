@@ -2,17 +2,37 @@
 
     <a href="">
         <div class="logo">
-            <img class="h-24 w-32" src="assets/logo.png" alt="">
+            <img class="h-24 w-44" src="assets/logo.png" alt="">
         </div>
     </a>
+
     <div class="search-bar flex flex-row max-w-[750px] mt-3">
         <mat-form-field class="w-[500px]">
             <mat-label>Search For Any Product</mat-label>
             <mat-icon matPrefix>search</mat-icon>
             <input matInput type="text" placeholder="Search..." />
         </mat-form-field>
-
         <app-select-dropdown class="relative right-[213px]"></app-select-dropdown>
     </div>
-    
+
+    <div class="flex flex-row justify-center items-center -ml-6 gap-2">
+        <div
+            class="cart bg-white w-28 h-10 flex flex-row justify-center items-center gap-3 rounded-full border-black border-2">
+            <mat-icon class="-m-2" matPrefix>shopping_cart</mat-icon>
+            <mat-divider vertical></mat-divider>
+            <span class="text-xl font-bold">01</span>
+        </div>
+
+        <div class="buttons flex flex-row gap-2">
+
+            <button class="secondary w-52" mat-stroked-button>
+                <mat-icon>storefront</mat-icon>
+                Become A Seller
+            </button>
+
+            <button class="dark-button" mat-raised-button>Login
+                <mat-icon>person</mat-icon>
+            </button>
+        </div>
+    </div>
 </div>
