@@ -1,0 +1,37 @@
+<div class="footer bg-[#338187] h-72 text-white flex flex-col justify-center items-center gap-12">
+    <div class="container flex flex-row justify-between">
+        <div class="quick-links">
+            <h1>Quick Links</h1>
+            <div class="links flex flex-col gap-2">
+                <a href="">Home</a>
+                <a href="">Categories</a>
+                <a href="">Dashboard</a>
+                <a href="">Login</a>
+            </div>
+        </div>
+
+        <div class="customer-service">
+            <h1>Customer Service</h1>
+            <div class="links flex flex-col gap-2">
+                <a href="">Term & Condition</a>
+                <a href="">Privacy Policy</a>
+                <a href="">Add Payment Method</a>
+                <a href="">Buyer Protection</a>
+            </div>
+        </div>
+
+        <div class="pay-with">
+            <h1>Pay With</h1>
+            <div class="payments w-44 flex flex-wrap gap-2">
+                <img *ngFor="let payment of payments" class="w-12 h-12 object-contain bg-white rounded-full"
+                    [src]="payment.Image" alt="Payment Method">
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container w-full flex flex-col items-center">
+        <mat-divider class="w-full"></mat-divider>
+        <span class="text-center mt-4">©2025 Oncart Store. All rights reserved.</span>
+    </div>
+</div>
