@@ -27,6 +27,7 @@
     "express": "^4.18.2",
     "ngx-select-dropdown": "^3.3.2",
     "rxjs": "~7.8.0",
+    "swiper": "^11.2.6",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },
