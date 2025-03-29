@@ -16,18 +16,17 @@ import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { SocialLoginComponent } from './auth/social-login/social-login.component';
 import { SignupComponent } from './auth/signup/signup.component';
-import { ComponentsModule } from './components/components.module'; 
-import {MatSelectModule} from '@angular/material/select';
-
-
-
+import { ComponentsModule } from './components/components.module';
+import { MatSelectModule } from '@angular/material/select';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SocialLoginComponent,
-    SignupComponent
+    SignupComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +38,7 @@ import {MatSelectModule} from '@angular/material/select';
     MatInputModule,
     MatButtonModule,
     MatSelectModule,
-    ComponentsModule
+    ComponentsModule,
   ],
   providers: [provideClientHydration(), provideAnimationsAsync()],
   bootstrap: [AppComponent],
