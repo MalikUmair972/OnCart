@@ -1,0 +1,32 @@
+<div class="flex flex-wrap justify-center gap-3">
+    <div *ngFor="let product of products"
+        class="products w-60 h-96 flex flex-col justify-center items-center border rounded-lg shadow-md p-4">
+
+        <div class="img w-40 h-40 flex justify-center items-center overflow-hidden">
+            <img [src]="product.Image" alt="product image" class="w-full h-full object-cover">
+        </div>
+
+        <div class="name text-center mt-2">
+            <span class="text-sm font-semibold block w-48 text-wrap">{{ product.name }}</span>
+        </div>
+
+        <div class="rating flex flex-row justify-center items-center gap-4 mt-1">
+            <span class="w-12 h-6 flex justify-center items-center text-xs bg-[#1C9A10] text-white gap-1 rounded-md">
+                {{ product.raing }} <mat-icon>star</mat-icon>
+            </span>
+            <span class="text-sm font-semibold">{{ product.sold }}</span>
+        </div>
+
+        <div class="price mt-1">
+            <span class="text-2xl font-bold">{{ product.price }}</span>
+        </div>
+
+        <div class="button mt-2">
+            <button mat-flat-button class="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-md">
+                Add to Cart
+                <mat-icon class="text-lg">shopping_cart</mat-icon>
+            </button>
+        </div>
+        
+    </div>
+</div>
