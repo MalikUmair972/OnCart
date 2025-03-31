@@ -19,6 +19,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { ComponentsModule } from './components/components.module';
 import { MatSelectModule } from '@angular/material/select';
 import { HomeComponent } from './pages/home/home.component';
+import { SidebarModule } from './sidebar/sidebar.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HomeComponent } from './pages/home/home.component';
     SocialLoginComponent,
     SignupComponent,
     HomeComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -39,6 +41,7 @@ import { HomeComponent } from './pages/home/home.component';
     MatButtonModule,
     MatSelectModule,
     ComponentsModule,
+    SidebarModule
   ],
   providers: [provideClientHydration(), provideAnimationsAsync()],
   bootstrap: [AppComponent],
