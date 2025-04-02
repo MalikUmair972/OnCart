@@ -7,13 +7,29 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import {MatDividerModule} from '@angular/material/divider';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatButtonModule } from '@angular/material/button';
+import { register } from 'swiper/element/bundle';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { SelectDropdownComponent } from './select-dropdown/select-dropdown.component';
+import { FooterComponent } from './footer/footer.component';
+import { SliderComponent } from './slider/slider.component';
+import { ProductComponent } from './product/product.component';
+
+register();
 
 @NgModule({
-  declarations: [NavbarComponent, SelectDropdownComponent],
+  declarations: [
+    NavbarComponent,
+    SelectDropdownComponent,
+    FooterComponent,
+    SliderComponent,
+    ProductComponent,
+    
+  ],
   imports: [
     CommonModule,
     FormsModule,
@@ -24,8 +40,16 @@ import { SelectDropdownComponent } from './select-dropdown/select-dropdown.compo
     BrowserModule,
     ReactiveFormsModule,
     MatAutocompleteModule,
-    MatDividerModule
+    MatDividerModule,
+    MatButtonModule,
   ],
-  exports: [NavbarComponent, SelectDropdownComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  exports: [
+    NavbarComponent,
+    SelectDropdownComponent,
+    FooterComponent,
+    SliderComponent,
+    ProductComponent
+  ],
 })
 export class ComponentsModule {}
