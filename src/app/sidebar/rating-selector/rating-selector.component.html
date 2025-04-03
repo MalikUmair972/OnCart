@@ -1,0 +1,11 @@
+<div class="w-[250px] border-2 border-gray-400 mt-4">
+
+    <div class="heading h-10 bg-gray-400 p-2">
+        <h3 class="text-xl">Customer Rating </h3>
+    </div>
+
+    <div class="check-boxes" *ngFor="let rating of ratings">
+        <mat-checkbox disableRipple>{{rating}} <mat-icon>star</mat-icon> & above</mat-checkbox>
+    </div>
+    
+</div>
