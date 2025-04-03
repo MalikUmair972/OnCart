@@ -1,0 +1,10 @@
+::ng-deep .mat-mdc-checkbox .mdc-checkbox__ripple {
+    display: none !important;
+  }
+::ng-deep .mdc-checkbox .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background {
+    background-color: #338187 !important;
+    border-color: #338187 !important;
+}  
+::ng-deep .mdc-form-field>label {
+    font-weight: 600;
+}
