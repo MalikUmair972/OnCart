@@ -1,0 +1,27 @@
+
+  .mat-mdc-slider {
+    min-width: 80%;
+  }
+  
+  .mat-mdc-outlined-button {
+    height: 30px !important;
+    margin-top: 25px;
+  }
+
+  // .mat-icon {
+  //   height: 18px !important;
+  // }
+
+ ::ng-deep .mat-mdc-slider .mdc-slider__track--active_fill {
+    border-color: #338187 !important;
+  }
+
+ ::ng-deep .mat-mdc-slider .mdc-slider__thumb-knob {
+    border-color: #338187 !important;
+  }
+
+ ::ng-deep .mat-mdc-slider-visual-thumb .mat-ripple {
+    height: 0% !important;
+    width: 0% !important;
+}
+  

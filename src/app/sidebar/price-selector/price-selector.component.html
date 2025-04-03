@@ -1,0 +1,28 @@
+<div class="price-container w-[250px] border-2 border-gray-400">
+    <div class="heading h-10 bg-gray-400 p-2">
+        <h3 class="text-xl">Price</h3>
+    </div>
+
+    <div class="range flex flex-row justify-center items-center gap-2 mt-5">
+        <div class="slider">
+            <div class="labels w-40 flex justify-between font-bold mb-1">
+                <span class="min-label">Rs{{ minValue }}</span>
+                <span class="max-label ml-2">Rs{{ maxValue }}</span>
+            </div>
+
+            <mat-slider min="3000" max="50000" step="1000">
+                <input [(ngModel)]="minValue" matSliderStartThumb>
+                <input [(ngModel)]="maxValue" matSliderEndThumb>
+            </mat-slider>
+        </div>
+
+        <div class="button">
+            <button mat-stroked-button>
+                <span class="text-[#338187] font-bold">Filter        
+                </span>
+            </button>
+        </div>
+
+
+    </div>
+</div>
