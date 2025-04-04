@@ -18,6 +18,7 @@ import { SelectDropdownComponent } from './select-dropdown/select-dropdown.compo
 import { FooterComponent } from './footer/footer.component';
 import { SliderComponent } from './slider/slider.component';
 import { ProductComponent } from './product/product.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 register();
 
@@ -28,6 +29,7 @@ register();
     FooterComponent,
     SliderComponent,
     ProductComponent,
+    CategoriesComponent,
     
   ],
   imports: [
@@ -49,7 +51,8 @@ register();
     SelectDropdownComponent,
     FooterComponent,
     SliderComponent,
-    ProductComponent
+    ProductComponent,
+    CategoriesComponent
   ],
 })
 export class ComponentsModule {}
