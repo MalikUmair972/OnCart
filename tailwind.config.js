@@ -1,10 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{html,ts}",  // Ensure this is set to match Angular's file types
+    "./src/**/*.{html,ts}", 
   ],
   theme: {
-    extend: {},
+    extend: {
+      rotate: {
+        '12': '12deg', 
+      },
+      boxShadow: {
+        'text-shadow-xl': '2px 2px 10px rgba(0, 0, 0, 0.5)', 
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.text-shadow-xl': {
+          textShadow: '2px 2px 10px rgba(0, 0, 0, 0.5)', 
+        },
+      })
+    },
+  ],
 }
