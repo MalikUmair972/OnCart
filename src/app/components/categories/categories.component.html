@@ -1,0 +1,16 @@
+<div class="container mx-auto">
+    <div class="grid grid-flow-row">
+        <div *ngFor="let category of categories">
+            <div class="categories rounded-xl max-h-72 w-[249px] relative overflow-hidden group">
+                <img class="rounded-xl" [src]="category.Image" alt="">
+
+                <div
+                    class="bg-[#338187] absolute bottom-[-52px] left-0 right-0 h-32 w-full rounded-lg rotate-12 transform group-hover:bottom-[-25px] group-hover:rotate-0 transition-all ease-in-out duration-200 p-4">
+                    <h1 class="text-white text-lg font-medium text-shadow-xl">{{category.categoryName}}</h1>
+                    <a href="#" class="text-white text-xs underline">{{category.categoryLink}}</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
