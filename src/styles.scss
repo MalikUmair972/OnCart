@@ -30,6 +30,8 @@ $oncart-theme: mat.define-light-theme(
     density: 0,
   )
 );
+:root {
+--mat-form-field-container-height: 48px !important; }
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -80,8 +82,11 @@ body {
 }
 
 .mat-mdc-form-field .mat-mdc-floating-label.mdc-floating-label {
-  margin-top: -4px !important;
   font-size: 12px;
+}
+
+.mat-mdc-form-field-infix {
+  --mat-form-field-container-height: 48px !important; 
 }
 
 .mat-mdc-form-field-subscript-wrapper {
@@ -96,7 +101,7 @@ body {
 .mat-mdc-unelevated-button {
   background-color: $primary-color !important;
   color: #fff !important;
-  height: 50px !important;
+  height: 30px !important;
   border-radius: 45px !important;
   font-size: 18px !important;
 }
@@ -138,4 +143,8 @@ body {
 
   .mat-mdc-raised-button .mat-icon {
     color: #fff !important;
+  }
+
+  .material-icons {
+    font-size: 18px !important;
   }
