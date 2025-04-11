@@ -25,6 +25,9 @@ import { SidebarModule } from './sidebar/sidebar.module';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { ProductComponent } from './pages/product/product.component';
 import { BreadcrumbsComponent } from './shared/breadcrumbs/breadcrumbs.component';
+import { ProductDetailsComponent } from './pages/product-details/product-details.component';
+import { ProductCarouselComponent } from './pages/product-details/product-carousel/product-carousel.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,9 @@ import { BreadcrumbsComponent } from './shared/breadcrumbs/breadcrumbs.component
     HomeComponent,
     CategoriesComponent,
     ProductComponent,
-    BreadcrumbsComponent
+    BreadcrumbsComponent,
+    ProductDetailsComponent,
+    ProductCarouselComponent
     
   ],
   imports: [
@@ -53,6 +58,7 @@ import { BreadcrumbsComponent } from './shared/breadcrumbs/breadcrumbs.component
     SidebarModule,
     
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [provideClientHydration(), provideAnimationsAsync()],
   bootstrap: [AppComponent],
 })
