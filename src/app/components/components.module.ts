@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {RouterModule} from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
@@ -17,8 +18,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SelectDropdownComponent } from './select-dropdown/select-dropdown.component';
 import { FooterComponent } from './footer/footer.component';
 import { SliderComponent } from './slider/slider.component';
-import { ProductComponent } from './product/product.component';
-import { CategoriesComponent } from './categories/categories.component';
+import { ProductsComponent } from './product/product.component';
+import { CategoryComponent } from './category/categories.component';
+import { SearchbarComponent } from './navbar/searchbar/searchbar.component';
 
 register();
 
@@ -28,8 +30,9 @@ register();
     SelectDropdownComponent,
     FooterComponent,
     SliderComponent,
-    ProductComponent,
-    CategoriesComponent,
+    ProductsComponent,
+    CategoryComponent,
+    SearchbarComponent,
     
   ],
   imports: [
@@ -44,6 +47,7 @@ register();
     MatAutocompleteModule,
     MatDividerModule,
     MatButtonModule,
+    RouterModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
@@ -51,8 +55,8 @@ register();
     SelectDropdownComponent,
     FooterComponent,
     SliderComponent,
-    ProductComponent,
-    CategoriesComponent
+    ProductsComponent,
+    CategoryComponent
   ],
 })
 export class ComponentsModule {}
